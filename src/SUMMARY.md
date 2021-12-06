@@ -5,6 +5,7 @@
 - [Inner join](./inner_join.md)
 - [Left join](./left_join.md)
 - [Right join](./right_join.md)
+- [Natural join](./natural_join.md)
 - [Multiple join](./multiple_joins.md)
 - [Exercise 1](./exercise_1.md)
 - [Exercise 2](./exercise_2.md)

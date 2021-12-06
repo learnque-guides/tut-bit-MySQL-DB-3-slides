@@ -4,7 +4,7 @@
 <head>
     <!-- Book generated using mdBook -->
     <meta charset="UTF-8">
-    <title>Right join - BIT :: LT :: MySQL DB :: 3 slides :: join, subquery</title>
+    <title>Natural join - BIT :: LT :: MySQL DB :: 3 slides :: join, subquery</title>
     <!-- Custom HTML head -->
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta name="description" content="">
@@ -77,7 +77,7 @@
 
     <nav id="sidebar" class="sidebar" aria-label="Table of contents">
         <div class="sidebar-scrollbox">
-            <ol class="chapter"><li class="chapter-item expanded "><a href="join.html"><strong aria-hidden="true">1.</strong> Join</a></li><li class="chapter-item expanded "><a href="cross_join.html"><strong aria-hidden="true">2.</strong> Cross join</a></li><li class="chapter-item expanded "><a href="inner_join.html"><strong aria-hidden="true">3.</strong> Inner join</a></li><li class="chapter-item expanded "><a href="left_join.html"><strong aria-hidden="true">4.</strong> Left join</a></li><li class="chapter-item expanded "><a href="right_join.html" class="active"><strong aria-hidden="true">5.</strong> Right join</a></li><li class="chapter-item expanded "><a href="natural_join.html"><strong aria-hidden="true">6.</strong> Natural join</a></li><li class="chapter-item expanded "><a href="multiple_joins.html"><strong aria-hidden="true">7.</strong> Multiple join</a></li><li class="chapter-item expanded "><a href="exercise_1.html"><strong aria-hidden="true">8.</strong> Exercise 1</a></li><li class="chapter-item expanded "><a href="exercise_2.html"><strong aria-hidden="true">9.</strong> Exercise 2</a></li><li class="chapter-item expanded "><a href="exercise_3.html"><strong aria-hidden="true">10.</strong> Exercise 3</a></li><li class="chapter-item expanded "><a href="exercise_4.html"><strong aria-hidden="true">11.</strong> Exercise 4</a></li><li class="chapter-item expanded "><a href="exercise_5.html"><strong aria-hidden="true">12.</strong> Exercise 5</a></li><li class="chapter-item expanded "><a href="exercise_6.html"><strong aria-hidden="true">13.</strong> Exercise 6</a></li><li class="chapter-item expanded "><a href="exercise_7.html"><strong aria-hidden="true">14.</strong> Exercise 7</a></li><li class="chapter-item expanded "><a href="subqueries.html"><strong aria-hidden="true">15.</strong> Subqueries</a></li><li class="chapter-item expanded "><a href="self-contained-subqueries.html"><strong aria-hidden="true">16.</strong> Self-contained subqueries</a></li><li class="chapter-item expanded "><a href="correlated-subqueries.html"><strong aria-hidden="true">17.</strong> Correlated subqueries</a></li><li class="chapter-item expanded "><a href="exercise_8.html"><strong aria-hidden="true">18.</strong> Exercise 8</a></li><li class="chapter-item expanded "><a href="exercise_10.html"><strong aria-hidden="true">19.</strong> Exercise 9</a></li><li class="chapter-item expanded "><a href="exercise_11.html"><strong aria-hidden="true">20.</strong> Exercise 10</a></li><li class="chapter-item expanded "><a href="exercise_12.html"><strong aria-hidden="true">21.</strong> Exercise 11</a></li><li class="chapter-item expanded "><a href="exercise_13.html"><strong aria-hidden="true">22.</strong> Exercise 12</a></li></ol>
+            <ol class="chapter"><li class="chapter-item expanded "><a href="join.html"><strong aria-hidden="true">1.</strong> Join</a></li><li class="chapter-item expanded "><a href="cross_join.html"><strong aria-hidden="true">2.</strong> Cross join</a></li><li class="chapter-item expanded "><a href="inner_join.html"><strong aria-hidden="true">3.</strong> Inner join</a></li><li class="chapter-item expanded "><a href="left_join.html"><strong aria-hidden="true">4.</strong> Left join</a></li><li class="chapter-item expanded "><a href="right_join.html"><strong aria-hidden="true">5.</strong> Right join</a></li><li class="chapter-item expanded "><a href="natural_join.html" class="active"><strong aria-hidden="true">6.</strong> Natural join</a></li><li class="chapter-item expanded "><a href="multiple_joins.html"><strong aria-hidden="true">7.</strong> Multiple join</a></li><li class="chapter-item expanded "><a href="exercise_1.html"><strong aria-hidden="true">8.</strong> Exercise 1</a></li><li class="chapter-item expanded "><a href="exercise_2.html"><strong aria-hidden="true">9.</strong> Exercise 2</a></li><li class="chapter-item expanded "><a href="exercise_3.html"><strong aria-hidden="true">10.</strong> Exercise 3</a></li><li class="chapter-item expanded "><a href="exercise_4.html"><strong aria-hidden="true">11.</strong> Exercise 4</a></li><li class="chapter-item expanded "><a href="exercise_5.html"><strong aria-hidden="true">12.</strong> Exercise 5</a></li><li class="chapter-item expanded "><a href="exercise_6.html"><strong aria-hidden="true">13.</strong> Exercise 6</a></li><li class="chapter-item expanded "><a href="exercise_7.html"><strong aria-hidden="true">14.</strong> Exercise 7</a></li><li class="chapter-item expanded "><a href="subqueries.html"><strong aria-hidden="true">15.</strong> Subqueries</a></li><li class="chapter-item expanded "><a href="self-contained-subqueries.html"><strong aria-hidden="true">16.</strong> Self-contained subqueries</a></li><li class="chapter-item expanded "><a href="correlated-subqueries.html"><strong aria-hidden="true">17.</strong> Correlated subqueries</a></li><li class="chapter-item expanded "><a href="exercise_8.html"><strong aria-hidden="true">18.</strong> Exercise 8</a></li><li class="chapter-item expanded "><a href="exercise_10.html"><strong aria-hidden="true">19.</strong> Exercise 9</a></li><li class="chapter-item expanded "><a href="exercise_11.html"><strong aria-hidden="true">20.</strong> Exercise 10</a></li><li class="chapter-item expanded "><a href="exercise_12.html"><strong aria-hidden="true">21.</strong> Exercise 11</a></li><li class="chapter-item expanded "><a href="exercise_13.html"><strong aria-hidden="true">22.</strong> Exercise 12</a></li></ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -146,26 +146,22 @@
 
             <div id="content" class="content">
                 <main>
-                    <h1 id="right-join"><a class="header" href="#right-join">Right join</a></h1>
-<p><strong>RIGHT JOIN</strong> returns all the rows of the table on the right side of the join and matching rows of the table on the left side of join. For the rows for which there is no matching row on left side, the result-set will contain null.</p>
-<div style="text-align: center">
-<img alt="Right join" src="./images/right_join.png" width="300"></img>
-</div>
-<pre><code class="language-sql">SELECT column_name(s)
-FROM table1
-RIGHT OUTER JOIN table2
-ON table1.column = table2.column
+                    <h1 id="natural-join"><a class="header" href="#natural-join">Natural join</a></h1>
+<p>A natural join is, well, supposed to be magically natural. This means that you tell MySQL what tables you want to join, and it figures out how to do it and gives you an INNER JOIN result set.</p>
+<pre><code class="language-sql">SELECT col_name1, col_name2
+FROM table1 NATURAL JOIN table2;
 </code></pre>
+<p>It's not recommended to use it, because of magic :)</p>
 
                 </main>
 
                 <nav class="nav-wrapper" aria-label="Page navigation">
                     <!-- Mobile navigation buttons -->
-                    <a rel="prev" href="left_join.html" class="mobile-nav-chapters previous"
+                    <a rel="prev" href="right_join.html" class="mobile-nav-chapters previous"
                         title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="natural_join.html" class="mobile-nav-chapters next"
+                    <a rel="next" href="multiple_joins.html" class="mobile-nav-chapters next"
                         title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -175,11 +171,11 @@ ON table1.column = table2.column
         </div>
 
         <nav class="nav-wide-wrapper" aria-label="Page navigation">
-            <a rel="prev" href="left_join.html" class="nav-chapters previous" title="Previous chapter"
+            <a rel="prev" href="right_join.html" class="nav-chapters previous" title="Previous chapter"
                 aria-label="Previous chapter" aria-keyshortcuts="Left">
                 <i class="fa fa-angle-left"></i>
             </a>
-            <a rel="next" href="natural_join.html" class="nav-chapters next" title="Next chapter"
+            <a rel="next" href="multiple_joins.html" class="nav-chapters next" title="Next chapter"
                 aria-label="Next chapter" aria-keyshortcuts="Right">
                 <i class="fa fa-angle-right"></i>
             </a>

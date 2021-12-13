@@ -28,4 +28,4 @@ The form of the multivalue subquery with IN predicate:
 
 Some examples :)
 
-Write a query that returns orders placed by customers from the United States. You can write a query against the Orders table that returns orders where the customer ID is in the set of customer IDs of customers from the United States
+Let's write a query that returns orders placed by customers from the United States (USA). You can write a query against the Orders table that returns orders where the customer ID is in the set of customer IDs of customers from the United States
